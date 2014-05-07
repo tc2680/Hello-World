@@ -19,13 +19,13 @@ There was a study at Williams College about [Impact of Major on Career Path for 
 - [Federal Housing Finance Agency](http://www.fhfa.gov)
 - Multiple college admin websites
 
-And the result is... there are all kinds of different data format - image, pdf, csv, freetext, webpage, and so on. And no single data source can be obtained to extract useful information. After a week of struggling, I realized that without doing hard data cleanup, manipulation, transformation, and calculation repeatedly, I'd not go too far for this project. And by the time I finished data preparation, I might have little or no time for visualation.
+And the result is... there are all kinds of different data format - image, pdf, csv, freetext, webpage, and so on. And no single data source can be obtained to extract useful information. After a week of struggling, I realized that without doing hard data cleanup, manipulation, transformation, and calculation repeatedly, I'd not go too far for this project. And by the time I finished data preparation, I might not have enough time for data exploration and visualization.
 
 <img src="http://tc2680.github.io/Hello-World/spent-5-days.png" width ="220">
 
 
 ### Second Proposal - The Secret Revealed
-Therefore I decided to move on to the second project idea - study a (semi) secret investment strategy named **4433** in fund management industry. Here is The Secret:
+Therefore I decided to move on to the second project idea - study a (semi) secret investment strategy nicknamed **4433** in fund management industry. Here is The Secret:
 
     1. Funds ranked top quartile by recent yearly return of same type
     2. Funds ranked top quartile by last two, three, and five years return of same type
@@ -67,16 +67,19 @@ Data Munging:
 | <img src="http://tc2680.github.io/Hello-World/102-master-excel.png" width ="180">    | <img src="http://tc2680.github.io/Hello-World/103-data-scraper.png" width ="180">    |
 
 
-| Week 5: are we there yet  | Week n+1: are we there...|
+| Week 5: are we there yet?  | Week n+1: are we there...|
 | ------------- | ------------- |
 | <img src="http://tc2680.github.io/Hello-World/104-output-roi.png" width ="360"> | <img src="http://tc2680.github.io/Hello-World/999_warning.png" width ="180"> |
 
 
 ### Data Visualization and The Practice
 Finally here comes the visualization part. 
-- From 1991 to 2013, average Return On Investment for S&P500 is 8.97%
-- But in the same period, All-Categories Strategy and All-Symbols Strategy return 11.29% and 12.69% respectively
-- There are different approaches to apply the investment strategy. For example, instead of looking at all recommended products, we can choose top 1%, 5%, 10%, or 20% of highest ranked funds 
+- From 1991 to 2013, average Return On Investment for S&P500 is **8.97%**
+- But in the same period, All-Categories Strategy and All-Symbols Strategy return **11.29%** and **12.69%** respectively
+
+    The power of compound interest is the most powerful force in the universe - Albert Einstein
+    
+- There are various styles to apply the investment strategy. For example, instead of looking at all recommended products, we can choose top 1%, 5%, 10%, or 20% of highest ranked funds 
 - You can see the [motion chart][link-demo] here
 
 <img src="http://tc2680.github.io/Hello-World/300-line-chart.png" width ="400">
