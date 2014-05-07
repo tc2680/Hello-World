@@ -77,10 +77,11 @@ Finally here comes the visualization part.
 - From 1991 to 2013, average Return On Investment for S&P500 is **8.97%**
 - But in the same period, All-Categories Strategy and All-Symbols Strategy return **11.29%** and **12.69%** respectively
 
-    The power of compound interest is the most powerful force in the universe - Albert Einstein
-    
+    "The power of compound interest is the most powerful force in the universe", Albert Einstein
+
+
 - There are various styles to apply the investment strategy. For example, instead of looking at all recommended products, we can choose top 1%, 5%, 10%, or 20% of highest ranked funds 
-- You can see the [motion chart][link-demo] here
+- Static charts are displayed below. You can also find the [motion chart][link-demo] here
 
 <img src="http://tc2680.github.io/Hello-World/300-line-chart.png" width ="400">
 <img src="http://tc2680.github.io/Hello-World/301-bar-chart.png" width ="400">
