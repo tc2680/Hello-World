@@ -14,9 +14,9 @@ Initially there were two project proposals in the beginning of semester. The fir
 <img src="http://tc2680.github.io/Hello-World/major-employment-housing.png" width ="600">
 
 There was a study at Williams College about [Impact of Major on Career Path for 15600 Williams College Alums][link-introduction-01] which had similar idea but with much smaller scope and dataset. My study began with reviewing data sources including: 
-- [U.S. Census Bureau](www.census.gov)
-- [U.S. Bureau of Labor Statistics](www.bls.gov)
-- [Federal Housing Finance Agency](www.fhfa.gov)
+- [U.S. Census Bureau](http://www.census.gov)
+- [U.S. Bureau of Labor Statistics](http://www.bls.gov)
+- [Federal Housing Finance Agency](http://www.fhfa.gov)
 - Multiple college admin websites
 
 And the result is... First, there were all sorts of different types of data - image, pdf, csv, freetext, and so on. Secondly, no single sorce could be obtain to abstract usable information. After a week of struggling, I realized that without doing hard data cleanup, manipulation, transformation, and calculation repeatedly, I'd not go too far for this project. And by the time I finished data preparation, I might have little or no time for visualation.
@@ -62,10 +62,18 @@ Data Munging:
 | <img src="http://tc2680.github.io/Hello-World/104-output-roi.png" width ="360"> | <img src="http://tc2680.github.io/Hello-World/999_warning.png" width ="180"> |
 
 
-### Data Visualization and The Future
-Finally here comes to the data visualization. You can see the [motion chart][link-demo] here. Few things discovered:
+### Data Visualization and The Practice
+Finally here comes to the data visualization. You can see the [motion chart][link-demo] here. 
 - From 1991 to 2013, average Return On Investment for S&P500, All-Categories Strategy and All-Symbols Strategy are 8.97%, 11.29% and 12.69% respectively
 - There are different approaches to apply the investment strategy. For example, instead of looking at all recommended products, we can choose top 1%, 5%, 10%, or 20% of higheste ranked funds and compare the result. 
 <img src="http://tc2680.github.io/Hello-World/300-line-chart.png" width ="400">
 <img src="http://tc2680.github.io/Hello-World/301-bar-chart.png" width ="400">
 <img src="http://tc2680.github.io/Hello-World/302-bubble-chart.png" width ="400">
+
+
+### About The Future
+It would be nice if I can produce following charts:
+<img src="http://tc2680.github.io/Hello-World/chart-idea-02-universe.jpg" width ="400">
+<img src="http://tc2680.github.io/Hello-World/chart-idea-06-portfolio.jpg" width ="400">
+
+
