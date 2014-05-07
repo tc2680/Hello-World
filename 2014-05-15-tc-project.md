@@ -73,7 +73,7 @@ Finally here comes to the data visualization. You can see the [motion chart][lin
 
 ### About The Future
 It would be nice if I can produce following charts:
-<img src="http://tc2680.github.io/Hello-World/chart-idea-02-universe.jpg" width ="400">
-<img src="http://tc2680.github.io/Hello-World/chart-idea-06-portfolio.jpg" width ="400">
+<img src="http://tc2680.github.io/Hello-World/chart-idea-02-universe.png" width ="400">
+<img src="http://tc2680.github.io/Hello-World/chart-idea-06-portfolio.png" width ="400">
 
 
