@@ -1,0 +1,99 @@
+<html>
+<head>
+  <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+  <script type='text/javascript'>
+      google.load('visualization', '1', { 'packages': ['geomap'] });
+      google.setOnLoadCallback(drawMap);
+
+      function drawMap() {
+          var data = google.visualization.arrayToDataTable([
+        ['City', 'Water Pricing'],
+        ['Phoenix', 11.02],
+        ['Fresno', 15.99],
+        ['Memphis', 16.02],
+        ['Chicago', 16.08],
+        ['Baltimore', 19.25],
+        ['New York', 20.88],
+        ['San Antonio', 12.21],
+        ['Salt Lake City', 14.48],
+        ['Los Angeles', 27.18],
+        ['Seattle', 42.15],
+        ['Santa Fe', 43.28],
+        ['Charlotte', 14.16],
+        ['Dallas', 16.16],
+        ['Las Vegas', 17.18],
+        ['Tucson', 17.46],
+        ['Denver', 18.24],
+        ['Austin', 19.18],
+        ['Jacksonville', 19.54],
+        ['Houston', 21.97],
+        ['Fort Worth', 22.2],
+        ['Columbus', 23.95],
+        ['San Jose', 24.51],
+        ['Philadelphia', 27.34],
+        ['San Francisco', 30.63],
+        ['Boston', 31.84],
+        ['Atlanta', 33.83],
+        ['San Diego', 44.05],
+        ['Milwaukee', 16.11],
+        ['Detroit', 16.22],
+        ['Indianapolis', 25.24]
+      ]);
+
+          var options = {};
+          options['region'] = 'US';
+          options['colors'] = [0xBDEDFF, 0x82CAFF, 0x2B65EC]; //marker colors
+          options['dataMode'] = 'markers';
+          colorAxis: { colors: ['#BDEDFF', '#x2B65EC'] }
+          options['width'] = '800px'
+          options['height'] = '500px'
+
+          var container = document.getElementById('map_canvas');
+          var geomap = new google.visualization.GeoMap(container);
+          geomap.draw(data, options);
+      };
+  </script>
+</head>
+
+<body>
+    <table align='center' style="width:950px; height:600px;">
+    <tr><td valign='top' colspan='2' align="center">
+            <h2>Average Monthly Bill for Family of Four Using 50 gallons/person/day</h2>
+        </td></tr>
+    <tr><td><div id='map_canvas'></div></td>
+        <td align="right"><font size=2>Atlanta: 33.83 <br/>
+            Austin: 19.18 <br/>
+            Baltimore: 19.25 <br/>
+            Boston: 31.84 <br/>
+            Charlotte: 14.16 <br/>
+            Chicago: 16.08 <br/>
+            Columbus: 23.95 <br/>
+            Dallas: 16.16 <br/>
+            Denver: 18.24 <br/>
+            Detroit: 16.22 <br/>
+            Fort Worth: 22.20 <br/>
+            Fresno: 15.99 <br/>
+            Houston: 21.97 <br/>
+            Indianapolis: 25.24 <br/>
+            Jacksonville: 19.54 <br/>
+            Las Vegas: 17.18 <br/>
+            Los Angeles: 27.18 <br/>
+            Memphis: 16.02 <br/>
+            Milwaukee: 16.11 <br/>
+            New York: 20.88 <br/>
+            Philadelphia: 27.34 <br/>
+            Salt Lake City: 14.48 <br/>
+            San Antonio: 12.21 <br/>
+            San Diego: 44.05 <br/>
+            San Francisco: 30.63 <br/>
+            San Jose: 24.51 <br/>
+            Santa Fe: 43.28 <br/>
+            Seattle: 42.15 <br/>
+            Tucson: 17.46 <br/>
+            Phoenix: 11.02 <br/>
+
+            </font></td>
+    </tr></table>
+</body>
+
+</html>
