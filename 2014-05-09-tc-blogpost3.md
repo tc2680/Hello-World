@@ -27,6 +27,6 @@ Instead of a plain survey with a small simple bar chart, the goal of this blog p
 
 [<img src="http://tc2680.github.io/Hello-World/bp3-bar-chart-water.png" width ="700">][link-demo]
 
-Last but not least, from knowing nothing to producing three blog posts and a project, the EDAV class opens up many ideas and possibilities for my study and work. After three months of learning, the biggest change to me is - today when I look at an article or idea, I always try to picture how to visualize the message and seek a better way to tell the story. That's it.
+Last but not least, from knowing nothing to producing three blog posts and a project, the EDAV opens up many ideas and possibilities for my study and work. After three months of learning, the biggest change to me is - today when I look at any article, I always try to picture how to visualize the message and seek a better way to tell the story. That's it.
 
 # Thank you!
