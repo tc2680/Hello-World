@@ -1,0 +1,112 @@
+﻿<html>
+  <head>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+        google.load('visualization', '1', { packages: ['orgchart'] });
+        google.setOnLoadCallback(drawChart);
+        google.setOnLoadCallback(drawChartRs);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+            data.addRows([
+              [{ v: 'Mike', f: 'Mike<div style="color:red; font-style:italic">President</div>' }
+                    , ''    
+                    , 'The President'],
+              [{ v: 'Jim', f: 'Jim<div style="color:red; font-style:italic">Vice President</div>' }
+                    , 'Mike'
+                    , 'VP'],
+              
+              ['Alice'
+                    , 'Mike'
+                    , ''],
+              
+              ['Bob'
+                    , 'Jim'
+                    , 'Bob Sponge'],
+              
+              ['Carol'
+                    , 'Bob'
+                    , '']
+            ]);
+
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+            chart.draw(data, { allowHtml: true });
+        }
+
+        function drawChartRs() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+            data.addRows([
+                  ['Content-based <br/>(CB)', '<br>Recommendation Approach<br/>&nbsp;', 'Recommendation Approach']
+                , ['Collaborative Filtering <br/>(CF)', '<br>Recommendation Approach<br/>&nbsp;', 'Recommendation Approach']
+                , ['Hybrid', '<br>Recommendation Approach<br/>&nbsp;', 'Recommendation Approach']
+            //----------------------------------------------------------------------------
+                , ['Memory-based', 'Content-based <br/>(CB)', 'Recommendation Technique']
+                , ['Model-based', 'Content-based <br/>(CB)', 'Recommendation Technique']
+            //-------- Memory-based Commonly Used Technique
+                , ['Information Retrieval', 'Memory-based', 'Commonly Used Technique']
+                , ['* Clustering', 'Memory-based', 'Commonly Used Technique'] //used by CB and CF in both Memory and Model based
+            //-------- Model-based Commonly Used Technique
+                , ['Bayesian Classifiers', 'Model-based', 'Commonly Used Technique']
+                , ['Decision Trees', 'Model-based', 'Commonly Used Technique']
+            //----------------------------------------------------------------------------
+                , ['Memory-based ', 'Collaborative Filtering <br/>(CF)', 'Recommendation Technique']
+                , ['Model-based ', 'Collaborative Filtering <br/>(CF)', 'Recommendation Technique']
+            //-------- Memory-based Commonly Used Technique
+                , ['Nearest Neighbor', 'Memory-based ', 'Commonly Used Technique']
+                , ['Graph Theory', 'Memory-based ', 'Commonly Used Technique']
+            //-------- Model-based Commonly Used Technique
+                , ['Bayesian Networks', 'Model-based ', 'Commonly Used Technique']
+                , ['Linear Regression', 'Model-based ', 'Commonly Used Technique']
+                , ['Probablistic Models', 'Model-based ', 'Commonly Used Technique']
+                , ['** Artificial Neural Networks', 'Model-based ', 'Commonly Used Technique'] // used by CB and CF in Model based
+            //----------------------------------------------------------------------------
+                , ['Memory-based  ', 'Hybrid', 'Recommendation Technique']
+                , ['Model-based  ', 'Hybrid', 'Recommendation Technique']
+            //-------- Memory-based Commonly Used Technique
+                , ['Combine <br/>CB and CF', 'Memory-based  ', 'Commonly Used Technique']
+            //-------- Model-based Commonly Used Technique
+                , ['Combine <br/>CB and CF ', 'Model-based  ', 'Commonly Used Technique']
+                
+
+            ]);
+
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div_rs'));
+            chart.draw(data, { allowHtml: true, allowCollapse: true });
+
+        }
+
+    </script>
+    
+    <style type="text/css">
+        hr {
+            background-color: rgb(212, 212, 212);
+            color: rgb(212, 212, 212); 
+            height: 1px;
+            border: 0px none;
+            clear: both;
+        }
+    </style>
+
+  </head>
+
+  <body>
+  <br /><br />
+    <!-- test:
+    <div id='chart_div'></div> 
+    -->
+    
+    <table border="0" align="center" width="100%">
+        <tr align="center"><td><h3>Chart 1: Classification of Recommender Systems</h3></td></tr>
+        <tr align="center"><td><div id='chart_div_rs'></div></td></tr>
+        <tr align="center"><td><br /><br /><hr width="75%" />
+            * <i>Clustering</i> can be used in both CB and CF for Memory-based/Model-based recommendation technique<br />
+            ** <i>Artificial Neural Networks</i> can be used in both CB and CF for Model-based recommendation technique
+            </td></tr>
+    </table> 
+  </body>
+</html>
