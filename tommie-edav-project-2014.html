@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+
+<html>
+<head><!--##tc2680.github.io-->
+    <style type="text/css">  
+        a {  
+            font-family: Arial;  
+            font-size: 12px;  
+            text-decoration: none;  
+        }  
+          
+        a:link {  
+            color: #0000ff;  
+        }  
+          
+        a:visited {  
+            color: #0000ff;  
+        }  
+          
+        a:active {  
+            color: #666666;  
+        }  
+          
+        a:hover {  
+            color: #ff0000;  
+        }  
+    </style>  
+	
+	<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/2014/05/07/tc-project" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+	</script>
+	<script>
+	/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+	(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+	</script>
+
+</head>
+
+<div id="page"/>
+<table width="700" align="center">
+<tr><td>
+<h1 align="center"> The Secret of Compound Interest</h1> 
+<h4 align="center"> by Tommie's Project 2014 </h4>
+
+<br><h3>Introduction</h3>
+
+<p>Initially there were two project proposals in the beginning of semester. The first proposal was about discovering hidden relations among College Major, Employment Rate, and Housing Trend. Most people understand the consequence of housing market when employment rate is increasing or decreasing. But the concept of Employment is vague in terms of ages or years of working experience. My hypothesis is - is there a correlation exists in popularity of college major versus employment rate which ultimately leads to housing trend development?</p>
+
+<p align="center"><img src="http://tc2680.github.io/Hello-World/major-employment-housing.png" width ="600"></p>
+
+<p>There was a study at Williams College about <a href="http://web.williams.edu/Mathematics/devadoss/careerpath.html" target="_blank">Impact of Major on Career Path for 15600 Williams College Alums</a> which had similar idea but with much smaller scope and dataset. My study began with reviewing data sources including: 
+- <a href="http://www.census.gov" target="_blank">U.S. Census Bureau</a>
+- <a href="http://www.bls.gov" target="_blank">U.S. Bureau of Labor Statistics</a>
+- <a href="http://www.fhfa.gov" target="_blank">Federal Housing Finance Agency</a>
+- Multiple college admin websites</p>
+
+<p>And the result is... there are all kinds of different data format - image, pdf, csv, freetext, webpage, and so on. And no single data source can be obtained to extract useful information. After a week of struggling, I realized that without doing hard data cleanup, manipulation, transformation, and calculation repeatedly, I'd not go too far for this project. And by the time I finished data preparation, I might not have enough time for data exploration and visualization.</p>
+
+<p align="center"><img src="http://tc2680.github.io/Hello-World/spent-5-days.png" width ="220"></p>
+
+<br><h3>Second Proposal - The Secret Revealed</h3>
+
+<p>Therefore I decided to move on to the second project idea - study a (semi) secret investment strategy nicknamed <strong>4433</strong> in fund management industry. Here is The Secret:</p>
+
+<table width="100%"><tr><td bgcolor="gray">
+<font color="white">
+<ol>
+	<li>Funds ranked top quartile by recent yearly return of same type</li>
+	<li>Funds ranked top quartile by last two, three, and five years return of same type</li>
+	<li>Top one-third of funds from last six months return of same type</li>
+	<li>Top one-third of funds from last three months return of same type</li>
+</ol>
+</font>
+</td></tr></table>
+
+
+<br><h3>Learn to Swim in the Deep Data Sea</h3>
+
+<p>Financial Data Explored:
+- <a href="http://finance.yahoo.com" target="_blank">Yahoo Finance</a>: this is one of the oldest and popular financial website around today. The information provided is comprehensive and free. Product ranking summary is available. The problem is that no single entry can be found to download all data at once. Writing a data scraper is required to retrieve fund information one by one. 
+- <a href="http://research.tdameritrade.com/grid/public/mutualfunds/premierlist/premierlist.asp" target="_blank">TD Ameritrade</a>: the website was rebuilt couple years ago to be user friendly with a good deal of financial information. Under their data screening tool, multiple funds are displayed in the same place. But the build-in export function can only be used for the overview type of data, not for specific fund ranking information. <br />
+- <a href="https://www.fidelity.com/mutual-funds/overview" target="_blank">Fidelity Investment</a>: many companies use Fidelity as their 401k provider. The research utility from the Fidelity website provides good summary and detail information. Although data scraping is still needed, time to retrieving information can be minimized. However the biggest issue is that the website does not provides full-scale ranking information. 
+- <a href="http://www.morningstar.com/Cover/Funds.aspx" target="_blank">Morningstar</a>: I signed up for a basic account and took a look at the content of fund performance section. It turns out that majority of information from the website can also be retrieved from Yahoo Finance for free. Since I need to calculate fund ranking regardless, Yahoo Finance is a better choice for the project data source. <br />
+- <a href="http://marketwatch.com/" target="_blank">Market Watch</a>: conveniently the security master list I need can be downloaded here</p>
+
+<p>Data Munging: Becutiful Soup 4.3.2 | Python 3 | Excel 2010 | SQL 2012</p>
+
+<br><h3>The Data Exploration Map</h3>
+
+<p align="center"><img src="http://tc2680.github.io/Hello-World/project_flow_chart.png" width ="500"></p>
+
+<br><h3>A Journey of a Thousand Miles Begins With a Single Step</h3>
+
+<table align="center">
+<tr valign="top"><td>Emotion Week 1: very exciting </td><td><img src="http://tc2680.github.io/Hello-World/100-master-list.png" width ="180"></td></tr>
+<tr valign="top"><td>Emotion Week 2: exciting </td><td><img src="http://tc2680.github.io/Hello-World/101-symbol-performance.png" width ="180"></td></tr>
+<tr valign="top"><td>Emotion Week 3: work </td><td><img src="http://tc2680.github.io/Hello-World/102-master-excel.png" width ="180"></td></tr>
+<tr valign="top"><td>Emotion Week 4: (work)^n </td><td><img src="http://tc2680.github.io/Hello-World/103-data-scraper.png" width ="180"></td></tr>
+<tr valign="top"><td>Emotion Week 5: are we there yet? </td><td><img src="http://tc2680.github.io/Hello-World/104-output-roi.png" width ="360"></td></tr>
+<tr valign="top"><td>Emotion Week n+1: <b>DO NOT</b> attempt to ask... </td><td><img src="http://tc2680.github.io/Hello-World/999_warning.png" width ="180"></td></tr>
+</table>
+
+<br><h3>Data Visualization and The Practice</h3>
+
+<p>Finally here comes the visualization part. 
+- From 1991 to 2013, average Return On Investment for S&amp;P500 is <strong>8.97%</strong>
+- But in the same period, All-Categories Strategy and All-Symbols Strategy return <strong>11.29%</strong> and <strong>12.69%</strong> respectively</p>
+
+<table width="100%" height="80px" ><tr><td bgcolor="gray" align="center">
+<font color="white">
+Compound interest is "the most powerful force in the universe" <br/>- Albert Einstein
+</font>
+</td></tr></table>
+
+<ul>
+<li>There are various styles to apply the investment strategy. For example, instead of looking at all recommended products, we can choose top 1%, 5%, 10%, or 20% of highest ranked funds </li>
+<li>Static charts are displayed below. You can also find the <a href="http://tc2680.github.io/Hello-World/ProjectDemo.html" target="_blank">motion chart</a> here</li>
+</ul>
+
+<p align="center"><img src="http://tc2680.github.io/Hello-World/300-line-chart.png" width ="400">
+<img src="http://tc2680.github.io/Hello-World/301-bar-chart.png" width ="400">
+<img src="http://tc2680.github.io/Hello-World/302-bubble-chart.png" width ="400"></p>
+
+<br><h3>About The Future</h3>
+
+<p>Things to Discover: unstructured data, social media, Internet of Things  </p>
+
+<p align="center"><img src="http://tc2680.github.io/Hello-World/chart-idea-02-universe.png" width ="400">
+<img src="http://tc2680.github.io/Hello-World/chart-idea-06-portfolio.png" width ="400"></p>
+
+
+<hr color="lightgray" style="height:0.1px;">
+<div class="meta">
+	<p class="date-publish">
+		Published: 
+		<date class="date-pub" title="2014-05-07T00:00:00-07:00" datetime="2014-05-07T00:00:00-07:00" pubdate>
+		<span class="month"><abbr>May</abbr></span>
+		<span class="day">07</span>
+		<span class="year">2014</span>
+		</date>
+	</p>
+</div>
+<div class="social">
+	<p><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="tommie_chen" data-lang="en">Tweet</a>
+	| <a href="#page">Back to Top</a>
+	
+</div>
+					
+</td></tr></table>
+
+</html>
